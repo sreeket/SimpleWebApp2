@@ -16,11 +16,11 @@ public class QueryProcessorTest {
 
     @Test
     public void knowsAboutShakespeare() throws Exception {
-        assertThat(queryProcessor.process("APE"), containsString("agile"));
+        assertThat(queryProcessor.process("APE"), containsString("test"));
     }
 
     @Test
     public void isNotCaseSensitive() throws Exception {
-        assertThat(queryProcessor.process("ape"), containsString("agile"));
+        assertThat(queryProcessor.process("ape"), containsString("test"));
     }
 }
