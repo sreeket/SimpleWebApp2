@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99410662-9588-494c-9e47-79997eebba17" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/develogical/app/QueryProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/develogical/app/QueryProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -31,11 +31,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryProcessorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QueryProcessorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/develogical/app/QueryProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -339,12 +348,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/develogical/app/QueryProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/develogical/app/QueryProcessorTest.java" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="580" />
-    <option name="y" value="191" />
+    <option name="x" value="495" />
+    <option name="y" value="156" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -516,7 +526,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="580" y="191" width="1400" height="1000" extended-state="0" />
+    <frame x="495" y="156" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -571,6 +581,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
         </state>
       </provider>
     </entry>
