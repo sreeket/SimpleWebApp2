@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>WebServer.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SimpleWebApp</a> &gt; <a href="index.source.html" class="el_package">com.develogical</a> &gt; <span class="el_source">WebServer.java</span></div><h1>WebServer.java</h1><pre class="source lang-java linenums">package com.develogical;
+
+import com.develogical.app.QueryProcessor;
+import com.develogical.web.ApiResponse;
+import com.develogical.web.IndexPage;
+import com.develogical.web.ResultsPage;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class WebServer {
+    @SuppressWarnings(&quot;WeakerAccess&quot;)
+<span class="nc" id="L18">    public WebServer() throws Exception {</span>
+<span class="nc" id="L19">        Server server = new Server(8080);</span>
+
+<span class="nc" id="L21">        ServletHandler handler = new ServletHandler();</span>
+<span class="nc" id="L22">        handler.addServletWithMapping(new ServletHolder(new Website()), &quot;/*&quot;);</span>
+<span class="nc" id="L23">        handler.addServletWithMapping(new ServletHolder(new Api()), &quot;/api/*&quot;);</span>
+<span class="nc" id="L24">        server.setHandler(handler);</span>
+
+<span class="nc" id="L26">        server.start();</span>
+<span class="nc" id="L27">    }</span>
+
+<span class="nc" id="L29">    static class Website extends HttpServlet {</span>
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+<span class="nc" id="L32">            String query = req.getParameter(&quot;q&quot;);</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">            if (query == null) {</span>
+<span class="nc" id="L34">                new IndexPage().writeTo(resp);</span>
+            } else {
+<span class="nc" id="L36">                new ResultsPage(query, new QueryProcessor().process(query)).writeTo(resp);</span>
+            }
+<span class="nc" id="L38">        }</span>
+    }
+
+<span class="nc" id="L41">    static class Api extends HttpServlet {</span>
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+<span class="nc" id="L44">            String query = req.getParameter(&quot;q&quot;);</span>
+<span class="nc" id="L45">            new ApiResponse(new QueryProcessor().process(query)).writeTo(resp);</span>
+<span class="nc" id="L46">        }</span>
+    }
+
+    public static void main(String[] args) throws Exception {
+<span class="nc" id="L50">        new WebServer();</span>
+<span class="nc" id="L51">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

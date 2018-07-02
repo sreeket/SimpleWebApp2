@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.develogical.app.QueryProcessorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-02T13:27:49" hostname="478-mac-11" time="0.194">
+  <properties/>
+  <testcase name="returnsEmptyStringIfCannotProcessQuery" classname="com.develogical.app.QueryProcessorTest" time="0.154"/>
+  <testcase name="isNotCaseSensitive" classname="com.develogical.app.QueryProcessorTest" time="0.039"/>
+  <testcase name="knowsAboutShakespeare" classname="com.develogical.app.QueryProcessorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
